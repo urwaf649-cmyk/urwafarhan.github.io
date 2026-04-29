@@ -1,161 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urwa Farhan | Fashion and Design Graduate</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        .hero { position:relative; min-height:78vh; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-        .hero-background::before {
-            content:""; position:absolute; inset:0; z-index:1;
-            background: linear-gradient(120deg,#fff1f8 0%, #f0f7ff 50%, #f7fff5 100%);
-            background-size:200% 200%; animation:bgShift 10s ease infinite;
-        }
-        @keyframes bgShift { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urwa Farhan | Concept-Led Fashion Designer</title>
 
-        .blob { position:absolute; border-radius:50%; filter:blur(40px); opacity:0.75; transform:translate3d(0,0,0); z-index:1; }
-        .blob.b1 { width:360px; height:360px; right:6%; top:6%; background: rgba(245,179,228,0.65); animation:move1 12s ease-in-out infinite; }
-        .blob.b2 { width:300px; height:300px; left:6%; top:18%; background: rgba(160,220,255,0.55); animation:move2 14s ease-in-out infinite; }
-        .blob.b3 { width:420px; height:420px; left:28%; bottom:-8%; background: rgba(200,255,210,0.45); animation:move3 16s ease-in-out infinite; }
+  <link rel="stylesheet" href="style.css" />
 
-        @keyframes move1 { 0%{transform:translate(0,0)}50%{transform:translate(-6%,6%)}100%{transform:translate(0,0)} }
-        @keyframes move2 { 0%{transform:translate(0,0)}50%{transform:translate(6%,-6%)}100%{transform:translate(0,0)} }
-        @keyframes move3 { 0%{transform:translate(0,0)}50%{transform:translate(-6%,-4%)}100%{transform:translate(0,0)} }
-
-        .hero-content { position:relative; z-index:3; text-align:center; padding:3rem 1rem; color:#111; }
-        .hero-name { font-family:'Playfair Display', serif; font-size:3rem; letter-spacing:2px; margin:0; color:#111; }
-        .hero-subtitle, .hero-description { margin:0.5rem 0; color:#333; }
-        @media(min-width:768px){ .hero-name{font-size:4rem} .hero-subtitle{font-size:1.25rem} .hero-description{font-size:1rem} }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#work" class="nav-link">Work</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#home" class="logo">Urwa Farhan</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#process">Design Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
+  <main>
+
+    <!-- HOME -->
     <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="blob b1" aria-hidden="true"></div>
-            <div class="blob b2" aria-hidden="true"></div>
-            <div class="blob b3" aria-hidden="true"></div>
-        </div>
-        <div class="hero-content">
-            <h1 class="hero-name">URWA FARHAN</h1>
-            <p class="hero-subtitle">Fashion and Design Graduate</p>
-            <p class="hero-description">Exploring fashion through design, construction, and styling.</p>
-        </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content fade-section">
+        <p class="eyebrow">Fashion Portfolio</p>
+        <h1>URWA FARHAN</h1>
+        <h2>Concept-Led Fashion Designer</h2>
+        <p>
+          Exploring fashion through design, garment construction, styling, and the relationship between fabric, structure, and the human body.
+        </p>
+        <a href="#portfolio" class="btn">View Portfolio</a>
+      </div>
     </section>
 
-    <!-- Work Section -->
-    <section class="work" id="work">
-        <div class="photo-gallery">
-            <div class="photo-item">
-                <img src="images/DSC_2936.JPG" alt="Fashion Photography">
-                <div class="photo-text">I am Urwa, a fashion and design graduate with a strong interest in creative development and craftsmanship. My work is driven by curiosity, learning, and a desire to understand fashion beyond aesthetics. I enjoy exploring ideas through design, construction, and styling. Each project reflects growth, intention, and attention to detail.</div>
-            </div>
-            <div class="photo-item">
-                <img src="images/DSC_2945.JPG" alt="Fashion Photography">
-                <div class="photo-text">Fashion, for me, is a balance between creativity and structure. With a background in design and hands on technical skills, I enjoy translating ideas into tangible outcomes. I am constantly learning and refining my approach. My goal is to grow into a thoughtful and skilled creative professional.</div>
-            </div>
-            <div class="photo-item">
-                <img src="images/DSC_2947.JPG" alt="Fashion Photography">
-                <div class="photo-text">I approach fashion with a mindset rooted in learning and experimentation. My education has allowed me to explore design, garment construction, and visual storytelling. I enjoy working through process and detail. Growth and consistency remain central to my journey.</div>
-            </div>
-            <div class="photo-item">
-                <img src="images/DSC_2950.JPG" alt="Fashion Photography">
-                <div class="photo-text">As a fashion graduate, I am interested in how ideas evolve into finished designs. My experience has shaped a practical yet creative approach to my work. I value collaboration, adaptability, and continuous improvement. Each step forward adds to my creative identity.</div>
-            </div>
-            <div class="photo-item">
-                <img src="images/DSC_2952.JPG" alt="Fashion Photography">
-                <div class="photo-text">My interest in fashion extends beyond trends to technique and concept. I enjoy understanding how design, styling, and research come together. With each project, I aim to strengthen my skills and confidence. I see learning as an ongoing part of my career path.</div>
-            </div>
-            <div class="photo-item">
-                <img src="images/DSC_2954.JPG" alt="Fashion Photography">
-                <div class="photo-text">I am motivated by creativity and the process of building something meaningful. My background in fashion design has helped me develop technical skills and a thoughtful design approach. I enjoy refining details and exploring new ideas. Progress and learning guide my work.</div>
-            </div>
-            <div class="photo-item">
-                <img src="images/DSC_3037.JPG" alt="Fashion Photography">
-                <div class="photo-text">Fashion allows me to combine creativity with structure and discipline. Through education and experience, I have developed a strong foundation in design and construction. I enjoy challenging myself creatively while staying open to growth. My focus is on evolving with purpose.</div>
-            </div>
-            <div class="photo-item">
-                <img src="images/DSC_3044.JPG" alt="Fashion Photography">
-                <div class="photo-text">I see fashion as a continuous learning journey. My work reflects experimentation, research, and attention to craftsmanship. I enjoy exploring different aspects of design and styling. Each experience helps shape my professional direction.</div>
-            </div>
-            <div class="photo-item">
-                <img src="images/DSC_3062.JPG" alt="Fashion Photography">
-                <div class="photo-text">With a background in fashion and design, I am building my creative path step by step. I value process, collaboration, and learning through practice. My interests continue to grow as I explore the industry. I aim to develop work that feels intentional and refined.</div>
-            </div>
-        </div>
+    <!-- INTRO -->
+    <section class="intro section-padding fade-section">
+      <div class="narrow-container">
+        <p class="section-label">Professional Identity</p>
+        <h2>Fashion, structure, and creative development.</h2>
+        <p>
+          Urwa Farhan is a fashion and design graduate whose work explores concept-led fashion, structured garment construction, styling, and visual presentation. Her creative practice combines research, sketch exploration, pattern development, and final garment construction to transform ideas into wearable forms.
+        </p>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-background" id="aboutBackground"></div>
-        <div class="about-container">
-            <div class="about-content">
-                <p class="about-text">
-                    I am a fashion and design graduate with a Pearson BTEC Level 5 Higher National Diploma in Art and Design Fashion. My background combines creative design training with professional internship experience, allowing me to approach fashion with both artistic sensitivity and practical understanding.
-                </p>
-                <p class="about-text">
-                    My experience includes pattern cutting, garment making, styling, trend forecasting, and CAD, along with exposure to academic administration and admissions marketing. I enjoy working in collaborative environments, contributing fresh ideas, and continuously developing my technical and communication skills.
-                </p>
-                <p class="about-text">
-                    I am particularly interested in fashion design, styling, and understanding how global trends and international standards influence the fashion industry. I am currently focused on learning, growing, and building a meaningful career in the fashion and creative industries.
-                </p>
-            </div>
+    <!-- ABOUT -->
+    <section class="about section-padding" id="about">
+      <div class="two-column">
+        <div class="image-card fade-section">
+          <img src="images/DSC_2936.JPG" alt="Urwa Farhan fashion portfolio portrait">
         </div>
+
+        <div class="text-content fade-section">
+          <p class="section-label">About</p>
+          <h2>Emerging fashion and design professional.</h2>
+
+          <p>
+            I am a fashion and design graduate with a Pearson BTEC Level 5 Higher National Diploma in Art and Design Fashion, currently progressing through my top-up studies. My background combines creative design training with professional internship experience, allowing me to approach fashion with both artistic sensitivity and practical understanding.
+          </p>
+
+          <p>
+            My experience includes pattern cutting, garment making, styling, trend forecasting, CAD, visual presentation, and design development. I am particularly interested in concept-led fashion design, structured garment construction, and understanding how global trends and international standards influence the fashion industry.
+          </p>
+
+          <p>
+            My creative practice explores the relationship between structure, fabric, silhouette, and the human body. I enjoy developing ideas through research, sketch exploration, pattern work, and garment construction, allowing concepts to progress from initial inspiration to final outcomes.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="contact-container">
-            <h2 class="contact-title">Let's connect.</h2>
-            <p class="contact-description">Open to creative opportunities, collaborations, and professional conversations.</p>
-            <a href="mailto:hello@urwafashion.com" class="contact-email">urwaf649@gmail.com</a>
-        </div>
+    <!-- PORTFOLIO -->
+    <section class="portfolio section-padding" id="portfolio">
+      <div class="section-heading fade-section">
+        <p class="section-label">Selected Projects</p>
+        <h2>Portfolio Work</h2>
+        <p>
+          Each project presents the concept, development process, and final outcome, showing how ideas are researched, tested, refined, and constructed.
+        </p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card fade-section">
+          <img src="images/DSC_3062.JPG" alt="Frostwood Elegance final garment">
+          <div class="project-info">
+            <p class="project-number">Project 01</p>
+            <h3>Frostwood Elegance</h3>
+            <p>
+              This project explores structured elegance inspired by organic forms and natural textures. The design investigates how sculptural silhouettes can balance softness and structure.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card fade-section">
+          <img src="images/DSC_0011.jpeg" alt="Sketch and silhouette development">
+          <div class="project-info">
+            <p class="project-number">Project 02</p>
+            <h3>Sketch and Silhouette Development</h3>
+            <p>
+              This project focuses on design exploration through sketching, proportion studies, and silhouette development. Multiple design ideas are refined before selecting the strongest direction.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card fade-section">
+          <img src="images/DSC_0044.jpeg" alt="Pattern and garment construction process">
+          <div class="project-info">
+            <p class="project-number">Project 03</p>
+            <h3>Pattern and Garment Construction</h3>
+            <p>
+              This project demonstrates the technical stage of fashion design, where creative ideas are translated into patterns, toiles, fittings, and final garment construction.
+            </p>
+          </div>
+        </article>
+
+      </div>
     </section>
 
-    <!-- Project Modal -->
-    <div class="modal" id="projectModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <div class="modal-body">
-                <div class="modal-images">
-                    <div class="modal-image" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);"></div>
-                    <div class="modal-image" style="background: linear-gradient(135deg, #f0f0f0 0%, #d5d5d5 100%);"></div>
-                    <div class="modal-image" style="background: linear-gradient(135deg, #fafafa 0%, #e5e5e5 100%);"></div>
-                </div>
-                <div class="modal-info">
-                    <h2 class="modal-title" id="modalTitle"></h2>
-                    <p class="modal-category" id="modalCategory"></p>
-                    <p class="modal-description">
-                        An exploration of design, craftsmanship, and concept development, focusing on construction, styling, and creative expression.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- FEATURED WORK -->
+    <section class="gallery section-padding">
+      <div class="section-heading fade-section">
+        <p class="section-label">Visual Portfolio</p>
+        <h2>Process and Final Outcomes</h2>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="gallery-grid">
+        <img src="images/DSC_5555.JPG" alt="Fashion portfolio image">
+        <img src="images/DSC_6666.JPG" alt="Fashion portfolio image">
+        <img src="images/DSC_7777.JPG" alt="Fashion portfolio image">
+        <img src="images/DSC_1111.png" alt="Fashion portfolio image">
+        <img src="images/DSC_1112.JPG" alt="Fashion portfolio image">
+        <img src="images/DSC_1113.JPG" alt="Fashion portfolio image">
+        <img src="images/DSC_3037.JPG" alt="Fashion portfolio image">
+        <img src="images/DSC_3044.JPG" alt="Fashion portfolio image">
+        <img src="images/DSC_3062.JPG" alt="Fashion portfolio image">
+      </div>
+    </section>
+
+    <!-- DESIGN PROCESS -->
+    <section class="process section-padding" id="process">
+      <div class="section-heading fade-section">
+        <p class="section-label">Design Process</p>
+        <h2>My Creative Process</h2>
+        <p>
+          My design process moves from research and experimentation into technical development and final garment construction.
+        </p>
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-step fade-section">
+          <span>01</span>
+          <h3>Concept Research</h3>
+          <p>
+            Each project begins with visual and conceptual research. Moodboards, references, textures, and themes help define the design direction.
+          </p>
+        </div>
+
+        <div class="process-step fade-section">
+          <span>02</span>
+          <h3>Sketch Exploration</h3>
+          <p>
+            Multiple sketches are produced to explore silhouettes, proportions, garment details, and the overall visual language of the project.
+          </p>
+        </div>
+
+        <div class="process-step fade-section">
+          <span>03</span>
+          <h3>Pattern Development</h3>
+          <p>
+            Patterns translate the design concept into a structured three-dimensional form, allowing the garment to move from idea to construction.
+          </p>
+        </div>
+
+        <div class="process-step fade-section">
+          <span>04</span>
+          <h3>Toile Development</h3>
+          <p>
+            Prototype garments are used to test fit, proportion, structure, and silhouette before final fabric and finishing decisions are made.
+          </p>
+        </div>
+
+        <div class="process-step fade-section">
+          <span>05</span>
+          <h3>Final Garment Construction</h3>
+          <p>
+            The final garment brings together concept, fabric, pattern, construction, and styling to create a completed fashion outcome.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section-padding" id="contact">
+      <div class="contact-box fade-section">
+        <p class="section-label">Contact</p>
+        <h2>For collaborations, professional opportunities, or portfolio inquiries.</h2>
+
+        <div class="contact-links">
+          <a href="mailto:urwaf649@gmail.com">urwaf649@gmail.com</a>
+          <a href="https://www.linkedin.com/in/urwa-farhan-00b6173a6" target="_blank">LinkedIn Profile</a>
+          <a href="#" target="_blank">Instagram / Professional Social Media</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Urwa Farhan. Fashion Portfolio.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
